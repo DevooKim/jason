@@ -1,6 +1,6 @@
 export const SHARE_QUERY_KEY = "data";
 export const SHARE_QUERY_KEYS = ["json", "data", "payload", "source"] as const;
-export const SHARE_DEFAULT_BASE_DOMAIN = "";
+export const SHARE_DEFAULT_BASE_DOMAIN = "https://jason-json.vercel.app";
 
 export const SHARE_BASE_DOMAIN = (
   process.env.NEXT_PUBLIC_SHARE_DOMAIN ??
