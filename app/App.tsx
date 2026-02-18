@@ -684,7 +684,10 @@ export function App() {
       return;
     }
 
-    loadFromJsonText(pasteText);
+    const ok = loadFromJsonText(pasteText);
+    if (ok) {
+      setActiveTab("viewer");
+    }
   }, [loadFromJsonText, pasteText]);
 
   const scrollToTop = useCallback(() => {
