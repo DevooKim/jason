@@ -271,7 +271,7 @@ export function App() {
   const [pasteText, setPasteText] = useState("");
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [selectedView, setSelectedView] = useState<"tree" | "raw">("tree");
-  const [activeTab, setActiveTab] = useState<"input" | "viewer">("viewer");
+  const [activeTab, setActiveTab] = useState<"input" | "viewer">("input");
   const [parsedJsonValue, setParsedJsonValue] = useState<JsonValue | null>(null);
   const [rawCollapsed, setRawCollapsed] = useState<boolean | number>(false);
   const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialThemeMode);
@@ -343,7 +343,6 @@ export function App() {
     setSelectedId(tree.rootIds[0] ?? null);
     setErrorMessage(null);
     setSearchInput("");
-    setActiveTab("viewer");
     if (treeScrollRef.current) {
       treeScrollRef.current.scrollTop = 0;
     }
