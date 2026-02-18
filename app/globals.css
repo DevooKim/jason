@@ -124,6 +124,22 @@ body {
   color: var(--text-high);
 }
 
+.app-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  align-items: center;
+  padding-bottom: 0.15rem;
+}
+
+.github-header-button {
+  gap: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
 .app-shell-card {
   border: 1px solid var(--line-strong);
   background: var(--vscode-bg-card);

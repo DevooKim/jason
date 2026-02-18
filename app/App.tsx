@@ -36,6 +36,7 @@ const IDENTIFIER_RE = /^[A-Za-z_$][A-Za-z0-9_$]*$/;
 const DEFAULT_COLLAPSE_DEPTH = 2;
 const TREE_ROW_HEIGHT = 40;
 const TREE_SCROLL_OVERSCAN = 10;
+const GITHUB_REPO_URL = "https://github.com/DevooKim/jason";
 const THEME_STORAGE_KEY = "jason-theme";
 const DEFAULT_THEME: ThemeMode = "dark";
 
@@ -706,6 +707,18 @@ export function App() {
   return (
     <div className="viewer-shell">
       <ToastProvider />
+      <header className="app-header">
+        <Button
+          size="sm"
+          className="ui-button github-header-button"
+          onPress={() => {
+            window.open(GITHUB_REPO_URL, "_blank", "noopener,noreferrer");
+          }}
+          aria-label="GitHub 저장소 열기"
+        >
+          GitHub
+        </Button>
+      </header>
       <Card className="app-shell-card">
         <CardContent className="viewer-content">
           <div className="workspace-tab-bar">
