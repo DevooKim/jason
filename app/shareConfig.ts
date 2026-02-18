@@ -2,9 +2,16 @@ export const SHARE_QUERY_KEY = "data";
 export const SHARE_QUERY_KEYS = ["json", "data", "payload", "source"] as const;
 export const SHARE_DEFAULT_BASE_DOMAIN = "";
 
-const envSource = (import.meta as { env?: Record<string, string | undefined> }).env;
-export const SHARE_BASE_DOMAIN = (envSource?.BUN_PUBLIC_SHARE_DOMAIN ?? SHARE_DEFAULT_BASE_DOMAIN).trim();
-export const SHARE_BASE_PATH = (envSource?.BUN_PUBLIC_SHARE_PATH ?? "").trim();
+export const SHARE_BASE_DOMAIN = (
+  process.env.NEXT_PUBLIC_SHARE_DOMAIN ??
+  process.env.BUN_PUBLIC_SHARE_DOMAIN ??
+  SHARE_DEFAULT_BASE_DOMAIN
+).trim();
+export const SHARE_BASE_PATH = (
+  process.env.NEXT_PUBLIC_SHARE_PATH ??
+  process.env.BUN_PUBLIC_SHARE_PATH ??
+  ""
+).trim();
 
 function normalizePath(path: string): string {
   if (!path) return "/";
@@ -22,4 +29,3 @@ export function getShareBaseUrl(): string {
   const path = normalizePath(SHARE_BASE_PATH || (typeof window === "undefined" ? "/" : window.location.pathname));
   return `${base}${path}`;
 }
-
