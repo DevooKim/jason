@@ -5,11 +5,18 @@ Next.js 기반으로 구성한 JSON 뷰어 앱입니다.
 ## 실행
 
 ```bash
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 브라우저에서 `http://localhost:3000`으로 접속하세요.
+
+## 배포
+
+```bash
+bunx vercel login
+bunx vercel deploy
+```
 
 ## 주요 구성
 
