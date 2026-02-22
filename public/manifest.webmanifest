@@ -1,6 +1,6 @@
 {
-  "name": "Jason",
-  "short_name": "Jason",
+  "name": "jason-json",
+  "short_name": "jason-json",
   "description": "JSON 뷰어",
   "start_url": "/",
   "display": "standalone",

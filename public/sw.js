@@ -1,5 +1,5 @@
-const CACHE_NAME = "jason-cache-v1";
-const RUNTIME_CACHE = "jason-runtime-v1";
+const CACHE_NAME = "jason-json-cache-v1";
+const RUNTIME_CACHE = "jason-json-runtime-v1";
 
 const PRECACHE_URLS = ["/", "/manifest.webmanifest"];
 

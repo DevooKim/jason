@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jason",
+  title: "jason-json",
   description: "JSON 뷰어",
   manifest: "/manifest.webmanifest",
   icons: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: "Jason",
+    title: "jason-json",
     statusBarStyle: "default",
   },
 };
